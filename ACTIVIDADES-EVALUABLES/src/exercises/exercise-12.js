@@ -13,7 +13,7 @@ export function exercise12(movies) {
   // Escribe tu solución aquí
   let titulosGuardados = titulos(movies)
   let titulosOrdenados = ordenarTitulos(titulosGuardados)
-  return "Los titulos ordenados son: "+ titulosOrdenados
+  return "Los titulos ordenados son: <br>"+ titulosOrdenados
 }
 const titulos =(movies)=>{
 let titulosGuardados = []
@@ -25,7 +25,11 @@ return titulosGuardados
 
 function ordenarTitulos(titulosGuardados){
 let titulosOrdenados= titulosGuardados.sort((b,a)=>sortStrings(b,a))
-return titulosOrdenados
+let colocacion = ""
+for(let i=0; i<titulosOrdenados.length; i++){
+  colocacion+=titulosOrdenados[i]+ "<br>"
+}
+return colocacion
 }
 
 function sortStrings(a, b) {

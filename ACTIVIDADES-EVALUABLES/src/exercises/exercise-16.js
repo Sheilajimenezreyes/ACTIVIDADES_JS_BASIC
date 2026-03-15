@@ -11,4 +11,21 @@ export function exercise16(movies) {
   const actors = ["Leonardo DiCaprio", "Robert De Niro", "Tom Hanks"];
 
   // Escribe tu solución aquí
+  let arr= filtroPeliculaPorActor(movies,actors)
+  console.log(arr)
+  return arr
 }
+
+function filtroPeliculaPorActor(movies, actors) {
+  let arrayTitulo = [];
+  movies.forEach((pelicula) => {
+    actors.forEach((actor) => {
+      if (pelicula.actors.includes(actor)) {
+        arrayTitulo.push(pelicula.title);
+      }
+    });
+  });
+  let sinRepetir = [...new Set(arrayTitulo)]
+  return sinRepetir
+}
+

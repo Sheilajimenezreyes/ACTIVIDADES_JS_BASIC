@@ -26,4 +26,5 @@ Pista: usa el método "groupBy" de la clase Object
 */
 export function exercise15(movies) {
   // Escribe tu solución aquí
+ return Object.groupBy(movies,pelicula=>pelicula.category)
 }
